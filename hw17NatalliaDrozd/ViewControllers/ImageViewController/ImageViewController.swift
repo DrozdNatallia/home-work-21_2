@@ -64,9 +64,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate  {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
     
-//    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
 //
-//    }
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         print(scrollView.zoomScale)
         print("new")
