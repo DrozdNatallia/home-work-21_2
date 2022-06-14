@@ -1,0 +1,6 @@
+framework module Pods_hw17NatalliaDrozd {
+  umbrella header "Pods-hw17NatalliaDrozd-umbrella.h"
+
+  export *
+  module * { export * }
+}
