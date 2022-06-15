@@ -37,7 +37,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("i love Oleg")
         deleteButton.isHidden = true
         // инициалищируем кнопку удаления, чтоб можно было добавлять в навигацию
         tableView.delegate = self
