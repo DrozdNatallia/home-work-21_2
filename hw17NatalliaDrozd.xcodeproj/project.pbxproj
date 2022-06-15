@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0C4962285A5D5400232692 /* UiViewController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C4961285A5D5400232692 /* UiViewController + extension.swift */; };
 		CC4D96222840FEE6000C1906 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4D96202840FEE6000C1906 /* ImageViewCell.swift */; };
 		CC4D96232840FEE6000C1906 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4D96212840FEE6000C1906 /* ImageViewCell.xib */; };
 		CC4D962A28427B51000C1906 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4D962828427B51000C1906 /* ImageViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0C4961285A5D5400232692 /* UiViewController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController + extension.swift"; sourceTree = "<group>"; };
 		CC4D96202840FEE6000C1906 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		CC4D96212840FEE6000C1906 /* ImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 		CC4D962828427B51000C1906 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			children = (
 				CCC2B3E0283F74C800F68377 /* ViewController + extension.swift */,
 				CCD95A80284A9BD2005EF8A7 /* Function.swift */,
+				CC0C4961285A5D5400232692 /* UiViewController + extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				CC4D96222840FEE6000C1906 /* ImageViewCell.swift in Sources */,
 				CCEAAA8D2848B8A600A0B515 /* FoldersCollectionViewCell.swift in Sources */,
 				CCC2B3E1283F74C800F68377 /* ViewController + extension.swift in Sources */,
+				CC0C4962285A5D5400232692 /* UiViewController + extension.swift in Sources */,
 				CCD95A81284A9BD2005EF8A7 /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
