@@ -63,9 +63,12 @@ func tappedAtCell(key: ContentType?, indexPath: IndexPath){
 extension UIViewController {
     
     func showALert() {
+        let keychain = KeychainSwift()
+        
         var checkPassword: UITextField!
         var passwordArea: UITextField!
-        var userPass = UserDefaults.standard.string(forKey: "pass")
+        var userPass = keychain.get("pass")
+        //var userPass = UserDefaults.standard.string(forKey: "pass")
         if userPass != nil {
             let checkPasswordAlert = UIAlertController(title: "Enter password", message: nil, preferredStyle: .alert)
             checkPasswordAlert.addTextField { textField in
@@ -96,8 +99,10 @@ extension UIViewController {
                 passwordArea = textField
             }
             let setPasswordButton = UIAlertAction(title: "Set Password", style: .cancel) {_ in
-                UserDefaults.standard.set("\(passwordArea.text!)", forKey: "pass")
-                userPass = UserDefaults.standard.string(forKey: "pass")
+                keychain.set("\(passwordArea.text!)", forKey: "pass")
+                userPass = keychain.get("pass")
+                //UserDefaults.standard.set("\(passwordArea.text!)", forKey: "pass")
+                //userPass = UserDefaults.standard.string(forKey: "pass")
             }
             let cancelButton = UIAlertAction(title: "Cancel", style: .destructive)
             passwordAlert.addAction(setPasswordButton)
