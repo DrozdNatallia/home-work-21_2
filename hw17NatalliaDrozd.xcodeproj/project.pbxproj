@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6EBEBF928F91AA39A4100F92 /* Pods_hw17NatalliaDrozd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B4BBBF639A9ADDBD56B5C7 /* Pods_hw17NatalliaDrozd.framework */; };
+		CC0C4962285A5D5400232692 /* UiViewController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0C4961285A5D5400232692 /* UiViewController + extension.swift */; };
 		CC4D96222840FEE6000C1906 /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4D96202840FEE6000C1906 /* ImageViewCell.swift */; };
 		CC4D96232840FEE6000C1906 /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4D96212840FEE6000C1906 /* ImageViewCell.xib */; };
 		CC4D962A28427B51000C1906 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4D962828427B51000C1906 /* ImageViewController.swift */; };
 		CC4D962B28427B51000C1906 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4D962928427B51000C1906 /* ImageViewController.xib */; };
 		CCA9C675283E91730041556E /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA9C673283E91730041556E /* MyCell.swift */; };
 		CCA9C676283E91730041556E /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCA9C674283E91730041556E /* MyCell.xib */; };
+		CCB0F23E285A36B70009DE03 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CCB0F23D285A36B70009DE03 /* SnapKit */; };
+		CCB0F242285A3D2F0009DE03 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CCB0F241285A3D2F0009DE03 /* KeychainSwift */; };
 		CCC2B3E1283F74C800F68377 /* ViewController + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC2B3E0283F74C800F68377 /* ViewController + extension.swift */; };
 		CCD95A81284A9BD2005EF8A7 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD95A80284A9BD2005EF8A7 /* Function.swift */; };
 		CCEA259E283E119A0064986A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEA259D283E119A0064986A /* AppDelegate.swift */; };
@@ -30,9 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		342D3F2A72098978AFEEE701 /* Pods-hw17NatalliaDrozd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw17NatalliaDrozd.release.xcconfig"; path = "Target Support Files/Pods-hw17NatalliaDrozd/Pods-hw17NatalliaDrozd.release.xcconfig"; sourceTree = "<group>"; };
-		78B4BBBF639A9ADDBD56B5C7 /* Pods_hw17NatalliaDrozd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hw17NatalliaDrozd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF5384B08F14046E1F92C3A /* Pods-hw17NatalliaDrozd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw17NatalliaDrozd.debug.xcconfig"; path = "Target Support Files/Pods-hw17NatalliaDrozd/Pods-hw17NatalliaDrozd.debug.xcconfig"; sourceTree = "<group>"; };
+		CC0C4961285A5D5400232692 /* UiViewController + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController + extension.swift"; sourceTree = "<group>"; };
 		CC4D96202840FEE6000C1906 /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
 		CC4D96212840FEE6000C1906 /* ImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 		CC4D962828427B51000C1906 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -61,22 +61,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EBEBF928F91AA39A4100F92 /* Pods_hw17NatalliaDrozd.framework in Frameworks */,
+				CCB0F242285A3D2F0009DE03 /* KeychainSwift in Frameworks */,
+				CCB0F23E285A36B70009DE03 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		731A184038750FA76ABFF118 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CBF5384B08F14046E1F92C3A /* Pods-hw17NatalliaDrozd.debug.xcconfig */,
-				342D3F2A72098978AFEEE701 /* Pods-hw17NatalliaDrozd.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		CC6C8C452843E4D000AA6D25 /* FoldersCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +129,7 @@
 			children = (
 				CCC2B3E0283F74C800F68377 /* ViewController + extension.swift */,
 				CCD95A80284A9BD2005EF8A7 /* Function.swift */,
+				CC0C4961285A5D5400232692 /* UiViewController + extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -154,8 +147,6 @@
 			children = (
 				CCEA259C283E119A0064986A /* hw17NatalliaDrozd */,
 				CCEA259B283E119A0064986A /* Products */,
-				731A184038750FA76ABFF118 /* Pods */,
-				D3F0BA1A03EAF0E69858E70F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,14 +193,6 @@
 			path = ImageCollectionCell;
 			sourceTree = "<group>";
 		};
-		D3F0BA1A03EAF0E69858E70F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				78B4BBBF639A9ADDBD56B5C7 /* Pods_hw17NatalliaDrozd.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -217,17 +200,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCEA25AE283E11A50064986A /* Build configuration list for PBXNativeTarget "hw17NatalliaDrozd" */;
 			buildPhases = (
-				8CE7429299E16972E0269E8A /* [CP] Check Pods Manifest.lock */,
 				CCEA2596283E119A0064986A /* Sources */,
 				CCEA2597283E119A0064986A /* Frameworks */,
 				CCEA2598283E119A0064986A /* Resources */,
-				27AF4A6E848FA858BE86C7FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = hw17NatalliaDrozd;
+			packageProductDependencies = (
+				CCB0F23D285A36B70009DE03 /* SnapKit */,
+				CCB0F241285A3D2F0009DE03 /* KeychainSwift */,
+			);
 			productName = hw17NatalliaDrozd;
 			productReference = CCEA259A283E119A0064986A /* hw17NatalliaDrozd.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +241,10 @@
 				Base,
 			);
 			mainGroup = CCEA2591283E119A0064986A;
+			packageReferences = (
+				CCB0F23C285A36B70009DE03 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CCB0F240285A3D2F0009DE03 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = CCEA259B283E119A0064986A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -283,48 +272,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		27AF4A6E848FA858BE86C7FF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hw17NatalliaDrozd/Pods-hw17NatalliaDrozd-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hw17NatalliaDrozd/Pods-hw17NatalliaDrozd-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hw17NatalliaDrozd/Pods-hw17NatalliaDrozd-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8CE7429299E16972E0269E8A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-hw17NatalliaDrozd-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CCEA2596283E119A0064986A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -340,6 +287,7 @@
 				CC4D96222840FEE6000C1906 /* ImageViewCell.swift in Sources */,
 				CCEAAA8D2848B8A600A0B515 /* FoldersCollectionViewCell.swift in Sources */,
 				CCC2B3E1283F74C800F68377 /* ViewController + extension.swift in Sources */,
+				CC0C4962285A5D5400232692 /* UiViewController + extension.swift in Sources */,
 				CCD95A81284A9BD2005EF8A7 /* Function.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,7 +430,6 @@
 		};
 		CCEA25AF283E11A50064986A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBF5384B08F14046E1F92C3A /* Pods-hw17NatalliaDrozd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,7 +457,6 @@
 		};
 		CCEA25B0283E11A50064986A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 342D3F2A72098978AFEEE701 /* Pods-hw17NatalliaDrozd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -558,6 +504,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCB0F23C285A36B70009DE03 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		CCB0F240285A3D2F0009DE03 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCB0F23D285A36B70009DE03 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCB0F23C285A36B70009DE03 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CCB0F241285A3D2F0009DE03 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCB0F240285A3D2F0009DE03 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CCEA2592283E119A0064986A /* Project object */;
 }
