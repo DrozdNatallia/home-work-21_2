@@ -20,16 +20,10 @@ class ImageViewController: UIViewController, UIScrollViewDelegate  {
 
         myScrollView.delegate = self
         myScrollView.isPagingEnabled = true
-
-        newScroll.delegate = self
-       // myScrollView.backgroundColor = .orange
-       // contentView.backgroundColor = .blue
-        newScroll.minimumZoomScale = 1.0
-        newScroll.maximumZoomScale = 2.0
-        for i in imageArray {
+        
+        for (index, element) in imageArray.enumerated() {
             
             newScroll = UIScrollView()
-           // newScroll.backgroundColor = .red
             contentView.addArrangedSubview(newScroll)
             newScroll.snp.makeConstraints { make in
                 make.width.equalTo(view.snp.width)
@@ -37,7 +31,6 @@ class ImageViewController: UIViewController, UIScrollViewDelegate  {
             }
             
             newView = UIView()
-            //newView.backgroundColor = .green
             newScroll.addSubview(newView)
             newView.snp.makeConstraints { make in
                 make.width.equalTo(view.snp.width)
@@ -45,36 +38,31 @@ class ImageViewController: UIViewController, UIScrollViewDelegate  {
             }
             
             imageView = UIImageView()
-            imageView.image = i
+            imageView.image = element
             imageView.contentMode = .scaleAspectFit
-           // imageView.backgroundColor = .blue
             newView.addSubview(imageView)
             //contentView.addArrangedSubview(imageView)
             imageView.snp.makeConstraints { make in
                 make.width.equalTo(view.snp.width)
                 make.height.equalTo(view.snp.height)
              }
-//
-//            newScroll.minimumZoomScale = 1.0
-//            newScroll.maximumZoomScale = 5.0
-            
-           
+            imageView.tag = index + 1
+            newScroll.delegate = self
+            newScroll.minimumZoomScale = 1.0
+            newScroll.maximumZoomScale = 5.0
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
     }
     
-//
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        let page = Int(myScrollView.contentOffset.x / myScrollView.frame.size.width) + 1
+        let image = view.viewWithTag(page)
+        return image
+    }
+    
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        print(scrollView.zoomScale)
-        print("new")
-        print(newScroll.zoomScale)
-        print(myScrollView.zoomScale)
         scrollView.isPagingEnabled = scrollView.zoomScale == 1
     }
-//    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-//
-//    }
-
 }
 

@@ -11,13 +11,24 @@ import UIKit
 
 extension UIViewController {
     
+    func isAppAlreadyLaunchedOnce() -> Bool {
+        let defaults = UserDefaults.standard
+        if let _ = defaults.string(forKey: "isAppAlreadyLaunchedOnce") {
+            return true
+        } else {
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            return false
+        }
+    }
+    
     func showALert() {
         let keychain = KeychainSwift()
-        
+        if !isAppAlreadyLaunchedOnce() {
+            keychain.clear()
+        }
         var checkPassword: UITextField!
         var passwordArea: UITextField!
         var userPass = keychain.get("pass")
-        //var userPass = UserDefaults.standard.string(forKey: "pass")
         if userPass != nil {
             let checkPasswordAlert = UIAlertController(title: "Enter password", message: nil, preferredStyle: .alert)
             checkPasswordAlert.addTextField { textField in
@@ -35,8 +46,6 @@ extension UIViewController {
                     errorAlert.addAction(tryButton)
                     self.present(errorAlert, animated: true)
                 }
-                
-                
             }
             checkPasswordAlert.addAction(checkButton)
             present(checkPasswordAlert, animated: true)
@@ -48,10 +57,11 @@ extension UIViewController {
                 passwordArea = textField
             }
             let setPasswordButton = UIAlertAction(title: "Set Password", style: .cancel) {_ in
-                keychain.set("\(passwordArea.text!)", forKey: "pass")
+                guard passwordArea.text != nil, let password = passwordArea.text else {
+                    return
+                }
+                keychain.set(password, forKey: "pass")
                 userPass = keychain.get("pass")
-                //UserDefaults.standard.set("\(passwordArea.text!)", forKey: "pass")
-                //userPass = UserDefaults.standard.string(forKey: "pass")
             }
             let cancelButton = UIAlertAction(title: "Cancel", style: .destructive)
             passwordAlert.addAction(setPasswordButton)
